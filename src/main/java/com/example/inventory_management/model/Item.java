@@ -1,14 +1,13 @@
 package com.example.inventory_management.model;
 
 import jakarta.persistence.Entity;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import jakarta.persistence.ManyToOne;
+import lombok.*;
 
 import java.math.BigDecimal;
 
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
@@ -21,4 +20,6 @@ public class Item extends AbstractEntity{
     private BigDecimal tva;
     private BigDecimal unitPriceTTC;
     private String image;
+    @ManyToOne
+    private Category category;
 }

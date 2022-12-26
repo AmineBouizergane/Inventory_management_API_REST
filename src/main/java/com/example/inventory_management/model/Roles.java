@@ -1,13 +1,16 @@
 package com.example.inventory_management.model;
 
 import jakarta.persistence.Entity;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode(callSuper = true)
 @Entity
 public class Roles extends AbstractEntity{
+
+    private String roleName;
+    private User user;
 }
