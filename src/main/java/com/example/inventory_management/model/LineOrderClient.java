@@ -3,7 +3,6 @@ package com.example.inventory_management.model;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.criteria.Order;
 import lombok.*;
 
 @Data

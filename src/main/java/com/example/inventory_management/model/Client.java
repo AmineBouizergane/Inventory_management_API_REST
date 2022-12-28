@@ -3,7 +3,6 @@ package com.example.inventory_management.model;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
-import jakarta.persistence.criteria.Order;
 import lombok.*;
 
 import java.util.List;
