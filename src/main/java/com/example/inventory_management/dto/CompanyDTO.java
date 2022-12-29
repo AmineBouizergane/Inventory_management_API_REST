@@ -1,5 +1,6 @@
 package com.example.inventory_management.dto;
 
+import com.example.inventory_management.model.Address;
 import com.example.inventory_management.model.Company;
 import lombok.Builder;
 import lombok.Data;
@@ -27,6 +28,17 @@ public class CompanyDTO {
         {
             ModelMapper modelMapper = new ModelMapper();
             return modelMapper.map(company, CompanyDTO.class);
+        }
+    }
+
+    public Company toEntity(){
+        if (this == null){
+            // TODO: Exception
+            return null;
+        }else
+        {
+            ModelMapper modelMapper = new ModelMapper();
+            return modelMapper.map(this, Company.class);
         }
     }
 }

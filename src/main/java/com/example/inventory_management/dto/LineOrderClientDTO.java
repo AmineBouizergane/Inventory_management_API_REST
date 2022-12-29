@@ -1,5 +1,6 @@
 package com.example.inventory_management.dto;
 
+import com.example.inventory_management.model.InventoryMvt;
 import com.example.inventory_management.model.LineOrderClient;
 import lombok.Builder;
 import lombok.Data;
@@ -20,6 +21,17 @@ public class LineOrderClientDTO {
         {
             ModelMapper modelMapper = new ModelMapper();
             return modelMapper.map(loc, LineOrderClientDTO.class);
+        }
+    }
+
+    public LineOrderClient toEntity(){
+        if (this == null){
+            // TODO: Exception
+            return null;
+        }else
+        {
+            ModelMapper modelMapper = new ModelMapper();
+            return modelMapper.map(this, LineOrderClient.class);
         }
     }
 }

@@ -1,5 +1,6 @@
 package com.example.inventory_management.dto;
 
+import com.example.inventory_management.model.Address;
 import com.example.inventory_management.model.InventoryMvt;
 import com.example.inventory_management.model.InventoryMvtType;
 import lombok.Builder;
@@ -26,6 +27,17 @@ public class InventoryMvtDTO {
         {
             ModelMapper modelMapper = new ModelMapper();
             return modelMapper.map(inventoryMvt, InventoryMvtDTO.class);
+        }
+    }
+
+    public InventoryMvt toEntity(){
+        if (this == null){
+            // TODO: Exception
+            return null;
+        }else
+        {
+            ModelMapper modelMapper = new ModelMapper();
+            return modelMapper.map(this, InventoryMvt.class);
         }
     }
 }

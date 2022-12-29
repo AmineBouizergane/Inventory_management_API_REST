@@ -1,5 +1,6 @@
 package com.example.inventory_management.dto;
 
+import com.example.inventory_management.model.InventoryMvt;
 import com.example.inventory_management.model.Supplier;
 import com.example.inventory_management.model.User;
 import lombok.Builder;
@@ -31,6 +32,17 @@ public class UserDTO {
         {
             ModelMapper modelMapper = new ModelMapper();
             return modelMapper.map(user, UserDTO.class);
+        }
+    }
+
+    public User toEntity(){
+        if (this == null){
+            // TODO: Exception
+            return null;
+        }else
+        {
+            ModelMapper modelMapper = new ModelMapper();
+            return modelMapper.map(this, User.class);
         }
     }
 }

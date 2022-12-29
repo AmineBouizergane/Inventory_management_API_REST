@@ -1,6 +1,7 @@
 package com.example.inventory_management.dto;
 
 import com.example.inventory_management.model.Address;
+import com.example.inventory_management.model.Category;
 import lombok.Builder;
 import lombok.Data;
 import org.modelmapper.ModelMapper;
@@ -20,6 +21,8 @@ public class AddressDTO {
             return null;
         }else
         {
+            ModelMapper modelMapper = new ModelMapper();
+            return modelMapper.map(address, AddressDTO.class);
             /*return AddressDTO.builder()
                     .address1(address.getAddress1())
                     .address2(address.getAddress2())
@@ -27,8 +30,17 @@ public class AddressDTO {
                     .zipCode(address.getZipCode())
                     .country(address.getCountry())
                     .build();*/
+        }
+    }
+
+    public Address toEntity(){
+        if (this == null){
+            // TODO: Exception
+            return null;
+        }else
+        {
             ModelMapper modelMapper = new ModelMapper();
-            return modelMapper.map(address, AddressDTO.class);
+            return modelMapper.map(this, Address.class);
         }
     }
 }
