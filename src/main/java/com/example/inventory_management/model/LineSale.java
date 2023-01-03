@@ -18,5 +18,6 @@ public class LineSale extends AbstractEntity{
     @JoinColumn(name = "saleId")
     private Sales sales;
     private BigDecimal quantity;
+    private Integer idCompany;
 
 }

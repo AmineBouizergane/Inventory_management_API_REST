@@ -1,6 +1,5 @@
 package com.example.inventory_management.validator;
 
-import com.example.inventory_management.dto.CategoryDTO;
 import com.example.inventory_management.dto.ItemDTO;
 import com.example.inventory_management.utils.ValidatorConstant;
 import org.springframework.util.StringUtils;
@@ -16,9 +15,9 @@ public class ItemValidator {
             errors.add(ValidatorConstant.REQUIRED_ITEM_CODE);
             errors.add(ValidatorConstant.REQUIRED_ITEM_DESIGNATION);
             errors.add(ValidatorConstant.REQUIRED_ITEM_PRICE_HT);
-            errors.add(ValidatorConstant.REQUIRED_ITEM_PRICE_HT_NEGATIVE);
+            errors.add(ValidatorConstant.ITEM_PRICE_HT_NEGATIVE);
             errors.add(ValidatorConstant.REQUIRED_ITEM_TVA);
-            errors.add(ValidatorConstant.REQUIRED_ITEM_TVA_NEGATIVE);
+            errors.add(ValidatorConstant.ITEM_TVA_NEGATIVE);
             errors.add(ValidatorConstant.REQUIRED_ITEM_CATEGORY);
             return errors;
         }
@@ -36,15 +35,15 @@ public class ItemValidator {
         }
 
         if(itemDTO.getUnitPriceHT().signum() < 0){
-            errors.add(ValidatorConstant.REQUIRED_ITEM_PRICE_HT_NEGATIVE);
+            errors.add(ValidatorConstant.ITEM_PRICE_HT_NEGATIVE);
         }
 
         if(itemDTO.getTva() == null){
             errors.add(ValidatorConstant.REQUIRED_ITEM_TVA);
         }
 
-        if(itemDTO.getUnitPriceHT().signum() < 0){
-            errors.add(ValidatorConstant.REQUIRED_ITEM_TVA_NEGATIVE);
+        if(itemDTO.getTva().signum() < 0){
+            errors.add(ValidatorConstant.ITEM_TVA_NEGATIVE);
         }
 
         if(itemDTO.getCategory() == null){

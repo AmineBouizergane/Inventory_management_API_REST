@@ -1,8 +1,6 @@
 package com.example.inventory_management.validator;
 
-import com.example.inventory_management.dto.CategoryDTO;
 import com.example.inventory_management.dto.ClientDTO;
-import com.example.inventory_management.dto.UserDTO;
 import com.example.inventory_management.utils.ValidatorConstant;
 import org.springframework.util.StringUtils;
 

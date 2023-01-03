@@ -17,15 +17,15 @@ public class CompanyValidator {
         }
 
         if(StringUtils.hasLength(companyDTO.getName())){
-            errors.add(ValidatorConstant.REQUIRED_USER_COUNTRY);
+            errors.add(ValidatorConstant.REQUIRED_COMPANY_NAME);
         }
 
         if(StringUtils.hasLength(companyDTO.getTel())){
-            errors.add(ValidatorConstant.REQUIRED_USER_CITY);
+            errors.add(ValidatorConstant.REQUIRED_COMPANY_TEL);
         }
 
-        if(StringUtils.hasLength(companyDTO.getTel())){
-            errors.add(ValidatorConstant.REQUIRED_USER_CITY);
+        if(StringUtils.hasLength(companyDTO.getMail())){
+            errors.add(ValidatorConstant.REQUIRED_USER_MAIL);
         }
 
         if(AddressValidator.validate(companyDTO.getAddress()).size()!=0){

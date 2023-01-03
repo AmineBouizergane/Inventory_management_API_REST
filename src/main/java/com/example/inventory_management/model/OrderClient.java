@@ -23,4 +23,5 @@ public class OrderClient extends AbstractEntity{
     private Client client;
     @OneToMany(mappedBy="orderClient")
     private List<LineOrderClient> lineOrderClientList;
+    private Integer idCompany;
 }

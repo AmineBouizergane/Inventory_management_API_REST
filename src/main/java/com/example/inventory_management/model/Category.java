@@ -15,6 +15,7 @@ import java.util.List;
 public class Category extends AbstractEntity{
     private String code;
     private String designation;
+    private Integer idCompany;
     @OneToMany(mappedBy = "category")
     private List<Item> items;
 }

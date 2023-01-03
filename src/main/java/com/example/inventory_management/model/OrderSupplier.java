@@ -23,4 +23,5 @@ public class OrderSupplier extends AbstractEntity{
     private Supplier supplier;
     @OneToMany(mappedBy="orderSupplier")
     private List<LineOrderSupplier> linesOrderSupplier;
+    private Integer idCompany;
 }

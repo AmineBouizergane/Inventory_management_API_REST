@@ -14,9 +14,10 @@ import lombok.*;
 public class LineOrderClient extends AbstractEntity{
 
     @ManyToOne
-    @JoinColumn(name="articleId")
+    @JoinColumn(name="itemId")
     private Item item;
     @ManyToOne
     @JoinColumn(name="orderClientId")
     private OrderClient orderClient;
+    private Integer idCompany;
 }

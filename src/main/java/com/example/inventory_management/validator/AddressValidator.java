@@ -13,27 +13,27 @@ public class AddressValidator {
         List<String> errors = new ArrayList<>();
 
         if(addressDTO == null){
-            errors.add(ValidatorConstant.REQUIRED_USER_COUNTRY);
-            errors.add(ValidatorConstant.REQUIRED_USER_CITY);
-            errors.add(ValidatorConstant.REQUIRED_USER_ADDRESS1);
-            errors.add(ValidatorConstant.REQUIRED_USER_ZIPCODE);
+            errors.add(ValidatorConstant.REQUIRED_ADDRESS_COUNTRY);
+            errors.add(ValidatorConstant.REQUIRED_ADDRESS_CITY);
+            errors.add(ValidatorConstant.REQUIRED_ADDRESS_ADDRESS1);
+            errors.add(ValidatorConstant.REQUIRED_ADDRESS_ZIPCODE);
             return errors;
         }
 
         if(StringUtils.hasLength(addressDTO.getCountry())){
-            errors.add(ValidatorConstant.REQUIRED_USER_COUNTRY);
+            errors.add(ValidatorConstant.REQUIRED_ADDRESS_COUNTRY);
         }
 
         if(StringUtils.hasLength(addressDTO.getCity())){
-            errors.add(ValidatorConstant.REQUIRED_USER_CITY);
+            errors.add(ValidatorConstant.REQUIRED_ADDRESS_CITY);
         }
 
         if(StringUtils.hasLength(addressDTO.getAddress1())){
-            errors.add(ValidatorConstant.REQUIRED_USER_ADDRESS1);
+            errors.add(ValidatorConstant.REQUIRED_ADDRESS_ADDRESS1);
         }
 
         if(StringUtils.hasLength(addressDTO.getZipCode())){
-            errors.add(ValidatorConstant.REQUIRED_USER_ZIPCODE);
+            errors.add(ValidatorConstant.REQUIRED_ADDRESS_ZIPCODE);
         }
 
         return errors;

@@ -18,4 +18,5 @@ public class LineOrderSupplier extends AbstractEntity{
     @ManyToOne
     @JoinColumn(name="orderSupplierId")
     private OrderSupplier orderSupplier;
+    private Integer idCompany;
 }

@@ -7,10 +7,13 @@ public class ValidatorConstant {
     public static final String REQUIRED_USER_LASTNAME    = "LastName field is required";
     public static final String REQUIRED_USER_MAIL    = "Mail field is required";
     public static final String REQUIRED_USER_PASSWORD    = "Password field is required";
-    public static final String REQUIRED_USER_COUNTRY    = "Country field is required";
-    public static final String REQUIRED_USER_CITY    = "City field is required";
-    public static final String REQUIRED_USER_ADDRESS    = "Address field is required";
-    public static final String REQUIRED_USER_ZIPCODE    = "ZipCode field is required";
+    public static final String REQUIRED_USER_ADDRESS = "Address field is required";
+
+    /* ADDRESS VALIDATOR CONSTANTS */
+    public static final String REQUIRED_ADDRESS_COUNTRY    = "Country field is required";
+    public static final String REQUIRED_ADDRESS_CITY    = "City field is required";
+    public static final String REQUIRED_ADDRESS_ADDRESS1    = "Address field is required";
+    public static final String REQUIRED_ADDRESS_ZIPCODE    = "ZipCode field is required";
 
     /* CATEGORY VALIDATOR CONSTANTS */
     public static final String REQUIRED_CATEGORY_CODE    = "Category code field is required";
@@ -19,9 +22,9 @@ public class ValidatorConstant {
     public static final String REQUIRED_ITEM_CODE    = "Code field is required";
     public static final String REQUIRED_ITEM_DESIGNATION    = "Designation field is required";
     public static final String REQUIRED_ITEM_PRICE_HT    = "Price HT field is required";
-    public static final String REQUIRED_ITEM_PRICE_HT_NEGATIVE    = "Price HT field cannot be negative";
+    public static final String ITEM_PRICE_HT_NEGATIVE = "Price HT field cannot be negative";
     public static final String REQUIRED_ITEM_TVA    = "Tva field is required";
-    public static final String REQUIRED_ITEM_TVA_NEGATIVE    = "Tva field is required";
+    public static final String ITEM_TVA_NEGATIVE = "Tva field is required";
     public static final String REQUIRED_ITEM_CATEGORY    = "Category field is required";
 
     /* COMPANY VALIDATOR CONSTANTS */

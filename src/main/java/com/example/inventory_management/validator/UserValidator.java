@@ -18,9 +18,7 @@ public class UserValidator {
             errors.add(ValidatorConstant.REQUIRED_USER_LASTNAME);
             errors.add(ValidatorConstant.REQUIRED_USER_MAIL);
             errors.add(ValidatorConstant.REQUIRED_USER_PASSWORD);
-            errors.add(ValidatorConstant.REQUIRED_USER_COUNTRY);
             errors.add(ValidatorConstant.REQUIRED_USER_ADDRESS);
-            errors.add(ValidatorConstant.REQUIRED_USER_ZIPCODE);
             return errors;
         }
 
