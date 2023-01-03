@@ -9,7 +9,7 @@ public class ValidatorConstant {
     public static final String REQUIRED_USER_PASSWORD    = "Password field is required";
     public static final String REQUIRED_USER_COUNTRY    = "Country field is required";
     public static final String REQUIRED_USER_CITY    = "City field is required";
-    public static final String REQUIRED_USER_ADDRESS1    = "Address1 field is required";
+    public static final String REQUIRED_USER_ADDRESS    = "Address field is required";
     public static final String REQUIRED_USER_ZIPCODE    = "ZipCode field is required";
 
     /* CATEGORY VALIDATOR CONSTANTS */
@@ -23,4 +23,10 @@ public class ValidatorConstant {
     public static final String REQUIRED_ITEM_TVA    = "Tva field is required";
     public static final String REQUIRED_ITEM_TVA_NEGATIVE    = "Tva field is required";
     public static final String REQUIRED_ITEM_CATEGORY    = "Category field is required";
+
+    /* COMPANY VALIDATOR CONSTANTS */
+    public static final String REQUIRED_COMPANY_NAME   = "Company name field is required";
+    public static final String REQUIRED_COMPANY_TEL    = "Company phone field is required";
+    public static final String REQUIRED_COMPANY_ADDRESS  = "Company address field is required";
+    public static final String REQUIRED_COMPANY_MAIL    = "Company mail field cannot be negative";
 }

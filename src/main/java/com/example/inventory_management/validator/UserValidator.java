@@ -19,7 +19,7 @@ public class UserValidator {
             errors.add(ValidatorConstant.REQUIRED_USER_MAIL);
             errors.add(ValidatorConstant.REQUIRED_USER_PASSWORD);
             errors.add(ValidatorConstant.REQUIRED_USER_COUNTRY);
-            errors.add(ValidatorConstant.REQUIRED_USER_ADDRESS1);
+            errors.add(ValidatorConstant.REQUIRED_USER_ADDRESS);
             errors.add(ValidatorConstant.REQUIRED_USER_ZIPCODE);
             return errors;
         }
@@ -41,7 +41,7 @@ public class UserValidator {
         }
 
         if(AddressValidator.validate(userDTO.getAddress()).size()!=0){
-            errors.addAll(AddressValidator.validate(userDTO.getAddress()));
+            errors.add(ValidatorConstant.REQUIRED_USER_ADDRESS);
         }
 
         return errors;

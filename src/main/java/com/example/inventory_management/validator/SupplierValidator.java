@@ -1,7 +1,7 @@
 package com.example.inventory_management.validator;
 
-import com.example.inventory_management.dto.CategoryDTO;
 import com.example.inventory_management.dto.ClientDTO;
+import com.example.inventory_management.dto.SupplierDTO;
 import com.example.inventory_management.dto.UserDTO;
 import com.example.inventory_management.utils.ValidatorConstant;
 import org.springframework.util.StringUtils;
@@ -9,32 +9,32 @@ import org.springframework.util.StringUtils;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ClientValidator {
-    public static List<String> validate(ClientDTO clientDTO){
+public class SupplierValidator {
+    public static List<String> validate(SupplierDTO supplierDTO){
         List<String> errors = new ArrayList<>();
 
-        if(clientDTO == null){
+        if(supplierDTO == null){
             errors.add(ValidatorConstant.REQUIRED_USER_FIRSTNAME);
             errors.add(ValidatorConstant.REQUIRED_USER_LASTNAME);
             errors.add(ValidatorConstant.REQUIRED_USER_MAIL);
-            errors.add(ValidatorConstant.REQUIRED_USER_PASSWORD);
             errors.add(ValidatorConstant.REQUIRED_USER_ADDRESS);
+            errors.add(ValidatorConstant.REQUIRED_USER_PASSWORD);
             return errors;
         }
 
-        if(StringUtils.hasLength(clientDTO.getFirstName())){
+        if(StringUtils.hasLength(supplierDTO.getFirstName())){
             errors.add(ValidatorConstant.REQUIRED_USER_FIRSTNAME);
         }
 
-        if(StringUtils.hasLength(clientDTO.getLastName())){
+        if(StringUtils.hasLength(supplierDTO.getLastName())){
             errors.add(ValidatorConstant.REQUIRED_USER_LASTNAME);
         }
 
-        if(StringUtils.hasLength(clientDTO.getMail())){
+        if(StringUtils.hasLength(supplierDTO.getMail())){
             errors.add(ValidatorConstant.REQUIRED_USER_MAIL);
         }
 
-        if(AddressValidator.validate(clientDTO.getAddress()).size()!=0){
+        if(AddressValidator.validate(supplierDTO.getAddress()).size()!=0){
             errors.add(ValidatorConstant.REQUIRED_USER_ADDRESS);
         }
 
