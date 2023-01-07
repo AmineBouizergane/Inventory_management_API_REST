@@ -20,7 +20,7 @@ public class ItemDTO {
     private String image;
     private CategoryDTO category;
 
-    public ItemDTO fromEntity(Item item){
+    public static ItemDTO fromEntity(Item item){
         if (item == null){
             // TODO: Exception
             return null;
@@ -31,14 +31,14 @@ public class ItemDTO {
         }
     }
 
-    public Item toEntity(){
-        if (this == null){
+    public static Item toEntity(ItemDTO itemDTO){
+        if (itemDTO == null){
             // TODO: Exception
             return null;
         }else
         {
             ModelMapper modelMapper = new ModelMapper();
-            return modelMapper.map(this, Item.class);
+            return modelMapper.map(itemDTO, Item.class);
         }
     }
 }
