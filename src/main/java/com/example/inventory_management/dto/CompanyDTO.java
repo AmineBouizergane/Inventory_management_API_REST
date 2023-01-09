@@ -20,7 +20,7 @@ public class CompanyDTO {
     private String mail;
     private String tel;
     private List<UserDTO> users;
-    public CompanyDTO fromEntity(Company company){
+    public static CompanyDTO fromEntity(Company company){
         if (company == null){
             // TODO: Exception
             return null;
@@ -31,14 +31,14 @@ public class CompanyDTO {
         }
     }
 
-    public Company toEntity(){
-        if (this == null){
+    public static Company toEntity(CompanyDTO companyDTO){
+        if (companyDTO == null){
             // TODO: Exception
             return null;
         }else
         {
             ModelMapper modelMapper = new ModelMapper();
-            return modelMapper.map(this, Company.class);
+            return modelMapper.map(companyDTO, Company.class);
         }
     }
 }

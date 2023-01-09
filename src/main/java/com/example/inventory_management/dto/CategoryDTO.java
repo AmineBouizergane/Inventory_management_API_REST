@@ -19,7 +19,7 @@ public class CategoryDTO {
     @JsonIgnore
     private List<ItemDTO> items;
 
-    public CategoryDTO fromEntity(Category category){
+    public static CategoryDTO fromEntity(Category category){
         if (category == null){
             // TODO: Exception
             return null;
@@ -30,14 +30,14 @@ public class CategoryDTO {
         }
     }
 
-    public Category toEntity(){
-        if (this == null){
+    public static Category toEntity(CategoryDTO categoryDTO){
+        if (categoryDTO == null){
             // TODO: Exception
             return null;
         }else
         {
             ModelMapper modelMapper = new ModelMapper();
-            return modelMapper.map(this, Category.class);
+            return modelMapper.map(categoryDTO, Category.class);
         }
     }
 }

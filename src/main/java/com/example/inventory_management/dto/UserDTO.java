@@ -24,7 +24,7 @@ public class UserDTO {
     private CompanyDTO company;
     private List<RolesDTO> roles;
 
-    public UserDTO fromEntity(User user){
+    public static UserDTO fromEntity(User user){
         if (user == null){
             // TODO: Exception
             return null;
@@ -35,14 +35,14 @@ public class UserDTO {
         }
     }
 
-    public User toEntity(){
-        if (this == null){
+    public static User toEntity(UserDTO userDTO){
+        if (userDTO == null){
             // TODO: Exception
             return null;
         }else
         {
             ModelMapper modelMapper = new ModelMapper();
-            return modelMapper.map(this, User.class);
+            return modelMapper.map(userDTO, User.class);
         }
     }
 }

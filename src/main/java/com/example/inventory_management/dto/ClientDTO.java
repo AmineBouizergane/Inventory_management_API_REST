@@ -20,7 +20,7 @@ public class ClientDTO {
     private String tel;
     private List<OrderClientDTO> ordersClient;
 
-    public ClientDTO fromEntity(Client client){
+    public static ClientDTO fromEntity(Client client){
         if (client == null){
             // TODO: Exception
             return null;
@@ -31,14 +31,14 @@ public class ClientDTO {
         }
     }
 
-    public Client toEntity(){
-        if (this == null){
+    public static Client toEntity(ClientDTO clientDTO){
+        if (clientDTO == null){
             // TODO: Exception
             return null;
         }else
         {
             ModelMapper modelMapper = new ModelMapper();
-            return modelMapper.map(this, Client.class);
+            return modelMapper.map(clientDTO, Client.class);
         }
     }
 }

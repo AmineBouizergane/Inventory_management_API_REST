@@ -2,6 +2,7 @@ package com.example.inventory_management.dto;
 
 import com.example.inventory_management.model.InventoryMvt;
 import com.example.inventory_management.model.OrderClient;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Builder;
 import lombok.Data;
 import org.modelmapper.ModelMapper;

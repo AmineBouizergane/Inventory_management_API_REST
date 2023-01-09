@@ -43,28 +43,28 @@ public class ItemServiceImpl implements ItemService {
     @Override
     public ItemDTO findById(Integer id) {
         if(id == null){
-            log.error("Invalid Item id");
+            log.error("Item ID is null");
             return null;
         }
 
         Optional<Item> item = itemRepos.findById(id);
         ItemDTO itemDTO = ItemDTO.fromEntity(item.get());
         return Optional.of(itemDTO).orElseThrow(() ->
-                new EntityNotFoundException(ErrorMsgConstant.INVALID_ITEM, ErrorCodes.ITEM_NOT_FOUND)
+                new EntityNotFoundException(ErrorMsgConstant.UNAVAILABLE_ITEM, ErrorCodes.ITEM_NOT_FOUND)
         );
     }
 
     @Override
     public ItemDTO findByCodeItem(String codeItem) {
         if(codeItem == null){
-            log.error("Invalid Item Code");
+            log.error("Item ID is null");
             return null;
         }
 
         Optional<Item> item = itemRepos.findByCodeItem(codeItem);
         ItemDTO itemDTO = ItemDTO.fromEntity(item.get());
         return Optional.of(itemDTO).orElseThrow(() ->
-                new EntityNotFoundException(ErrorMsgConstant.INVALID_ITEM, ErrorCodes.ITEM_NOT_FOUND)
+                new EntityNotFoundException(ErrorMsgConstant.UNAVAILABLE_ITEM, ErrorCodes.ITEM_NOT_FOUND)
         );
 
     }
@@ -79,10 +79,9 @@ public class ItemServiceImpl implements ItemService {
     @Override
     public void delete(Integer id) {
         if(id == null){
-            log.error("Invalid Item id");
+            log.error("Item ID is null");
             return;
         }
-
         itemRepos.deleteById(id);
     }
 }

@@ -21,7 +21,7 @@ public class SupplierDTO {
     private String tel;
     private List<OrderSupplierDTO> ordersSupplier;
 
-    public SupplierDTO fromEntity(Supplier supplier){
+    public static SupplierDTO fromEntity(Supplier supplier){
         if (supplier == null){
             // TODO: Exception
             return null;
@@ -32,14 +32,14 @@ public class SupplierDTO {
         }
     }
 
-    public Supplier toEntity(){
-        if (this == null){
+    public static Supplier toEntity(SupplierDTO supplierDTO){
+        if (supplierDTO == null){
             // TODO: Exception
             return null;
         }else
         {
             ModelMapper modelMapper = new ModelMapper();
-            return modelMapper.map(this, Supplier.class);
+            return modelMapper.map(supplierDTO, Supplier.class);
         }
     }
 }
