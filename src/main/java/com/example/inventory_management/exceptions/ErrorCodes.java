@@ -16,7 +16,9 @@ public enum ErrorCodes {
     SUPPLIER_NOT_FOUND(7000),
     SUPPLIER_NOT_VALID(7001),
     USER_NOT_FOUND(8000),
-    USER_NOT_VALID(8000);
+    USER_NOT_VALID(8000),
+    LINE_ORDER_LINE_NOT_FOUND(9000),
+    LINE_ORDER_LINE_NOT_VALID(9001);
 
     private int code;
     ErrorCodes(int code){

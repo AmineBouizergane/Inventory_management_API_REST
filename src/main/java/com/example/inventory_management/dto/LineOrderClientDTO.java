@@ -19,7 +19,7 @@ public class LineOrderClientDTO {
     private BigDecimal qte;
     private BigDecimal unitePrice;
 
-    public LineOrderClientDTO fromEntity(LineOrderClient loc){
+    public static LineOrderClientDTO fromEntity(LineOrderClient loc){
         if (loc == null){
             // TODO: Exception
             return null;
@@ -30,14 +30,14 @@ public class LineOrderClientDTO {
         }
     }
 
-    public LineOrderClient toEntity(){
-        if (this == null){
+    public static LineOrderClient toEntity(LineOrderClientDTO lineOrderClientDTO){
+        if (lineOrderClientDTO == null){
             // TODO: Exception
             return null;
         }else
         {
             ModelMapper modelMapper = new ModelMapper();
-            return modelMapper.map(this, LineOrderClient.class);
+            return modelMapper.map(lineOrderClientDTO, LineOrderClient.class);
         }
     }
 }

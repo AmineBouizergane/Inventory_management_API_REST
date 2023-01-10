@@ -19,7 +19,7 @@ public class OrderClientDTO {
     private ClientDTO client;
     private List<LineOrderClientDTO> lineOrderClientList;
 
-    public OrderClientDTO fromEntity(OrderClient oc){
+    public static OrderClientDTO fromEntity(OrderClient oc){
         if (oc == null){
             // TODO: Exception
             return null;
@@ -30,14 +30,14 @@ public class OrderClientDTO {
         }
     }
 
-    public OrderClient toEntity(){
-        if (this == null){
+    public static OrderClient toEntity(OrderClientDTO orderClientDTO){
+        if (orderClientDTO == null){
             // TODO: Exception
             return null;
         }else
         {
             ModelMapper modelMapper = new ModelMapper();
-            return modelMapper.map(this, OrderClient.class);
+            return modelMapper.map(orderClientDTO, OrderClient.class);
         }
     }
 }

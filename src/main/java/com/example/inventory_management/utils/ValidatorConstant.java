@@ -32,4 +32,16 @@ public class ValidatorConstant {
     public static final String REQUIRED_COMPANY_TEL    = "Company phone field is required";
     public static final String REQUIRED_COMPANY_ADDRESS  = "Company address field is required";
     public static final String REQUIRED_COMPANY_MAIL    = "Company mail field cannot be negative";
+
+    /* ORDER VALIDATOR CONSTANTS */
+    public static final String REQUIRED_ORDER_CODE   = "Order code field is required";
+    public static final String REQUIRED_ORDER_CLIENT   = "Order client field is required";
+    public static final String REQUIRED_ORDER_DETAILS   = "Order details is required";
+    public static final String REQUIRED_ORDER_SUPPLIER   = "Order supplier field is required";
+
+    /* LINE ORDER VALIDATOR CONSTANTS */
+    public static final String REQUIRED_LINE_ORDER_ITEM   = "Line order item field is required";
+    public static final String REQUIRED_LINE_ORDER_QTE   = "Line order quantity field is required";
+    public static final String REQUIRED_LINE_ORDER_UNITE_PRICE   = "Order unite price field is required";
+
 }
